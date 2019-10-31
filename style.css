@@ -1,0 +1,402 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+.container__fluid {
+  max-width: none;
+}
+.container__narrow {
+  max-width: 38rem;
+}
+.container__wide {
+  max-width: 60rem;
+}
+.sn__hero {
+  position: fixed;
+  background: linear-gradient(#222, #131313);
+  width: 100%;
+  max-width: 50vw;
+  min-height:90vh;
+  padding: 3rem 0;
+  top: 0;
+  display: flex;
+  text-align: center;
+}
+.sn__hero .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.sn__jumplink {
+  display: none;
+  font-size: 3rem;
+  line-height: 1;
+  width: 6rem;
+  margin-top: 1rem;
+  color: #b6aaff;
+  transition: transform 0.2s ease-out, opacity 0.3s ease-out;
+}
+.sn__jumplink:hover,
+.sn__jumplink:focus {
+  color: #fff;
+  transform: translateY(2px);
+}
+.sn__jumplink:active {
+  opacity: 0.7;
+  transition-duration: 0s;
+}
+.sn__wordmark {
+  display: block;
+  margin: 0 auto;
+}
+.sn__heading {
+  margin: 4rem 0 6rem;
+  position: relative;
+}
+.sn__heading__image {
+  position: absolute;
+  top: 50%;
+  margin-top: -9rem;
+  right: -13%;
+}
+.sn__title {
+  position: relative;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.sn__title .highlight {
+  color: #ffa78b;
+}
+.sn__subtitle {
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.02em;
+  color: #b1b1b1;
+}
+.sn__sheet {
+  position: relative;
+  width: 100%;
+  padding: 5rem 0 3rem;
+  max-width: 50vw;
+  margin-left: auto;
+  background: #131313;
+}
+.sn__form {
+  margin-bottom: 3rem;
+}
+.sn__form__item {
+  margin-top: 1.5rem;
+}
+.sn__form__label {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #b1b1b1;
+}
+.sn__form__label + .sn__form__input {
+  margin-top: 0.75rem;
+}
+
+.sn__form__input {
+  position: relative;
+}
+
+.sn__form__input__input {
+  appearance: none;
+  border: 1px solid transparent;
+  height: 3.5rem;
+  padding: 1rem 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.5rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  background: rgba(34,34,34,0.6);
+  width: 100%;
+  transition: border 0.2s ease-out, background 0.2s ease-out;
+  outline: none;
+}
+.sn__form__input__input::placeholder {
+  color: rgba(177,177,177,0.8);
+  transition: color 0.2s ease-out;
+}
+.sn__form__input__input:hover {
+  background: #222;
+}
+.sn__form__input__input:hover::placeholder {
+  color: #b1b1b1;
+}
+.sn__form__input__input:focus {
+  border-color: #96fcbf;
+  background: #131313;
+}
+.sn__form__input__input:focus::placeholder {
+  color: rgba(182,170,255,0.8);
+}
+.sn__legend {
+  margin-bottom: 0.5rem;
+}
+.sn__buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  justify-items: center;
+  gap: 1rem;
+}
+.sn__buttons__item {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: 0 2rem 2rem;
+  border-radius: 0.5rem;
+  background: rgba(34,34,34,0.6);
+  border: 2px solid transparent;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  transform-origin: bottom center;
+  transition: border 0.2s ease-out, background 0.2s ease-out, transform 0.3s ease-out, opacity 0.4s ease-out;
+}
+.sn__buttons__item:hover {
+  background: #222;
+  box-shadow: 0 0.25rem 1.25rem rgba(0,0,0,0.3);
+}
+.sn__buttons__item:focus {
+  background: #222;
+  border-color: #96fcbf;
+}
+.sn__buttons__item__selected,
+.sn__buttons__item__selected:hover {
+  border-color: #ffa78b;
+}
+.sn__buttons__item__selected,
+.sn__buttons__item__selected:hover,
+.sn__buttons__item__selected:focus {
+  background-color: #3f3483;
+}
+.sn__buttons__item:active {
+  transform: scale(0.98);
+  opacity: 0.7;
+  transition-duration: 0s;
+}
+.sn__buttons__item__image {
+  margin: -2rem auto 0;
+  display: block;
+  transform-origin: bottom center;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.28, 1.31);
+}
+.sn__buttons__item:hover .sn__buttons__item__image {
+  transform: translateY(-4px) rotate(2deg) scale(1.05);
+}
+.sn__buttons__item__title {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  transform-origin: bottom left;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.28, 1.31);
+}
+.sn__buttons__item:hover .sn__buttons__item__title {
+  transform: translateY(2px);
+}
+.sn__buttons__item__desc {
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02em;
+  margin-top: 0.75rem;
+  transform-origin: bottom left;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.28, 1.31);
+}
+.sn__buttons__item:hover .sn__buttons__item__desc {
+  transform: translateY(3px);
+}
+.sn__submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+}
+.sn__submit__button {
+  background: transparent;
+  border: 1px solid #b6aaff;
+  display: block;
+  width: 100%;
+  color: #96fcbf;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  transform-origin: bottom center;
+  transition: border 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out, transform 0.3s ease-out, opacity 0.4s ease-out;
+}
+.sn__submit__button:focus,
+.sn__submit__button:hover {
+  color: #131313;
+  border-color: transparent;
+  background: #96fcbf;
+}
+.sn__submit__button__special {
+  color: #131313;
+  border-color: transparent;
+}
+.sn__submit__button__special,
+.sn__submit__button__special:hover,
+.sn__submit__button__special:focus {
+  background: linear-gradient(205deg, #b6aaff 0%, #ffa78b 50%, #96fcbf 100%);
+}
+.sn__submit__button__disabled,
+.sn__submit__button__disabled:hover,
+.sn__submit__button__disabled:focus {
+  background-color: transparent;
+  border-color: #b1b1b1;
+  color: #b1b1b1;
+}
+.sn__submit__button:focus {
+  border-color: #96fcbf;
+}
+.sn__submit__button:active {
+  transform: scale(0.98);
+  opacity: 0.7;
+  transition-duration: 0s;
+}
+.sn__footer {
+  margin-top: 5rem;
+  text-align: center;
+}
+.sn__footer__footnote {
+  margin-top: 1.5rem;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #888;
+}
+.sn__footer__footnote a {
+  color: #b6aaff;
+}
+.sn__footer__footnote a:hover,
+.sn__footer__footnote a:focus {
+  color: #96fcbf;
+}
+.sn__footer__dot {
+  margin: 0.5em;
+}
+@media screen and (max-width: 800px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+  .sn__hero {
+    position: relative;
+    height: auto;
+    max-width: none;
+    padding: 1.5rem 0;
+  }
+  .sn__wordmark {
+    height: 5rem;
+  }
+  .sn__heading {
+    margin: 6rem 0 4rem;
+  }
+  .sn__heading__image {
+    height: 15rem;
+    margin-top: -8rem;
+    right: 0;
+  }
+  .sn__title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .sn__jumplink {
+    display: block;
+  }
+  .sn__sheet {
+    max-width: none;
+    margin: 0 auto;
+    padding-top: 1rem;
+  }
+  .sn__form {
+    margin-bottom: 2rem;
+  }
+  .sn__buttons__item__title {
+    font-size: 1.125rem;
+  }
+  .sn__buttons__item__desc {
+    font-size: 1rem;
+  }
+}

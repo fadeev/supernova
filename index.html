@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div>
+    <div class="sn__hero">
+      <div class="container container__narrow"><img class="sn__wordmark" src="/images/supernova/sn-wordmark-color.svg" />
+        <div class="sn__heading"><img class="sn__heading__image" src="/images/supernova/dust.svg" />
+          <div class="sn__title">Join the <div class="highlight">Supernova</div> experiment</div>
+        </div>
+        <div class="sn__subtitle">Coming Winter 2019</div><a class="sn__jumplink" href="#name" @click="setFocus()">&#8595;</a></div>
+      </div>
+      <div class="sn__sheet">
+        <form method="POST" action="https://foud.maillist-manage.com/weboptin.zc" ref="form">
+          <div class="sn__form">
+            <div class="container container__narrow">
+              <div class="sn__form__item"><label class="sn__form__label" for="name">You</label>
+                <div class="sn__form__input"><input class="sn__form__input__input" v-model="form.FIRSTNAME" type="text" placeholder="Your full name" ref="name" id="name" /></div>
+              </div>
+              <div class="sn__form__item"><label class="sn__form__label" for="email">Email</label>
+                <div class="sn__form__input"><input class="sn__form__input__input" v-model="form.CONTACT_EMAIL" type="email" placeholder="Your email address" required="required" id="email" /></div>
+              </div>
+              <div class="sn__form__item"><label class="sn__form__label" for="country">Country</label>
+                <div class="sn__form__input"><input class="sn__form__input__input" v-model="form.COUNTRY" required="required" id="country" /></div>
+              </div>
+            </div>
+          </div>
+          <fieldset>
+            <div class="container container__narrow">
+              <legend class="sn__legend sn__form__label" for="interests">I want to&hellip;</legend>
+            </div>
+            <div class="container container__wide">
+              <div class="sn__buttons container__fluid" id="interests">
+                <div class="sn__buttons__item" data-js="button-supernova" tabindex="0"><img class="sn__buttons__item__image" src="/images/supernova/dust-hand.svg" />
+                  <div class="sn__buttons__item__title">Lockup tokens on Supernova</div>
+                  <div class="sn__buttons__item__desc">You'll be notified when the initial lockdrop period begins.</div>
+                </div>
+                <div class="sn__buttons__item" :class="{'sn__buttons__item__selected': stardust}" data-js="button-stardust" @click="stardust = !stardust" @keyup.space.prevent="stardust = !stardust" tabindex="0"><img class="sn__buttons__item__image" src="/images/supernova/stardust-broadcast.svg" />
+                  <div class="sn__buttons__item__title">Get on Stardust Live</div>
+                  <div class="sn__buttons__item__desc">You'll be notified when Stardust Live is open for applications.</div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="container container__narrow">
+            <div class="sn__submit"><button class="sn__submit__button" data-js="submit" @click="submit" :class="{'sn__submit__button__special' : supernova &amp;&amp; stardust, 'sn__submit__button__disabled' : !supernova &amp;&amp; !stardust}">✨ Sprinkle me with dust</button></div>
+          </div>
+        </form>
+        <footer class="container container__narrow sn__footer"><img class="sn__lettermark" src="/images/supernova/sn-lettermark-color.svg" />
+          <div class="sn__footer__footnote"><span>Built by <a href="https://cosmos.network/">Cosmos</a> &amp; <a href="https://commonwealth.im/">Commonwealth Labs</a></span><span class="sn__footer__dot">&middot;</span><span>&copy; 2019 Supernova</span></div>
+        </footer>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
